@@ -46,10 +46,10 @@
 //
 // Introduction
 //
-// This file contains fields used by Boot ROM, startup code, and SW radio 
+// This file contains fields used by Boot ROM, startup code, and SW radio
 // stacks to configure chip behavior.
 //
-// Fields are documented in more details in hw_ccfg.h and CCFG.html in 
+// Fields are documented in more details in hw_ccfg.h and CCFG.html in
 // DriverLib documentation (doc_overview.html -> CPU Domain Memory Map -> CCFG).
 //
 //*****************************************************************************
@@ -148,7 +148,7 @@
 
 #ifndef SET_CCFG_MODE_CONF_XOSC_CAP_MOD
 // #define SET_CCFG_MODE_CONF_XOSC_CAP_MOD              0x0        // Apply cap-array delta
-#define SET_CCFG_MODE_CONF_XOSC_CAP_MOD                 0x1        // Don't apply cap-array delta 
+#define SET_CCFG_MODE_CONF_XOSC_CAP_MOD                 0x1        // Don't apply cap-array delta
 #endif
 
 #ifndef SET_CCFG_MODE_CONF_XOSC_CAPARRAY_DELTA
@@ -177,22 +177,22 @@
 //#####################################
 
 #ifndef SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE
-#define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE            0x00       // Disable ROM boot loader
-// #define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE         0xC5       // Enable ROM boot loader
+// #define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE      0x00       // Disable ROM boot loader
+#define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE         0xC5       // Enable ROM boot loader
 #endif
 
 #ifndef SET_CCFG_BL_CONFIG_BL_LEVEL
-// #define SET_CCFG_BL_CONFIG_BL_LEVEL                  0x0        // Active low to open boot loader backdoor
-#define SET_CCFG_BL_CONFIG_BL_LEVEL                     0x1        // Active high to open boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_LEVEL                  0x0        // Active low to open boot loader backdoor
+// #define SET_CCFG_BL_CONFIG_BL_LEVEL               0x1        // Active high to open boot loader backdoor
 #endif
 
 #ifndef SET_CCFG_BL_CONFIG_BL_PIN_NUMBER
-#define SET_CCFG_BL_CONFIG_BL_PIN_NUMBER                0xFF       // DIO number for boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_PIN_NUMBER             0x0B       // DIO number for boot loader backdoor
 #endif
 
 #ifndef SET_CCFG_BL_CONFIG_BL_ENABLE
-// #define SET_CCFG_BL_CONFIG_BL_ENABLE                 0xC5       // Enabled boot loader backdoor
-#define SET_CCFG_BL_CONFIG_BL_ENABLE                    0xFF       // Disabled boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_ENABLE                 0xC5       // Enabled boot loader backdoor
+// #define SET_CCFG_BL_CONFIG_BL_ENABLE                    0xFF       // Disabled boot loader backdoor
 #endif
 
 //#####################################
@@ -200,8 +200,8 @@
 //#####################################
 
 #ifndef SET_CCFG_CCFG_TI_OPTIONS_TI_FA_ENABLE
-#define SET_CCFG_CCFG_TI_OPTIONS_TI_FA_ENABLE           0x00       // Disable unlocking of TI FA option.
-// #define SET_CCFG_CCFG_TI_OPTIONS_TI_FA_ENABLE        0xC5       // Enable unlocking of TI FA option with the unlock code
+// #define SET_CCFG_CCFG_TI_OPTIONS_TI_FA_ENABLE           0x00       // Disable unlocking of TI FA option.
+#define SET_CCFG_CCFG_TI_OPTIONS_TI_FA_ENABLE        0xC5       // Enable unlocking of TI FA option with the unlock code
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_0_CPU_DAP_ENABLE
@@ -210,8 +210,8 @@
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_0_PRCM_TAP_ENABLE
-#define SET_CCFG_CCFG_TAP_DAP_0_PRCM_TAP_ENABLE         0x00       // Access disabled
-// #define SET_CCFG_CCFG_TAP_DAP_0_PRCM_TAP_ENABLE      0xC5       // Access enabled if also enabled in FCFG
+// #define SET_CCFG_CCFG_TAP_DAP_0_PRCM_TAP_ENABLE         0x00       // Access disabled
+#define SET_CCFG_CCFG_TAP_DAP_0_PRCM_TAP_ENABLE      0xC5       // Access enabled if also enabled in FCFG
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_0_TEST_TAP_ENABLE
@@ -220,18 +220,18 @@
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_1_PBIST2_TAP_ENABLE
-#define SET_CCFG_CCFG_TAP_DAP_1_PBIST2_TAP_ENABLE       0x00       // Access disabled
-// #define SET_CCFG_CCFG_TAP_DAP_1_PBIST2_TAP_ENABLE    0xC5       // Access enabled if also enabled in FCFG
+// #define SET_CCFG_CCFG_TAP_DAP_1_PBIST2_TAP_ENABLE       0x00       // Access disabled
+#define SET_CCFG_CCFG_TAP_DAP_1_PBIST2_TAP_ENABLE    0xC5       // Access enabled if also enabled in FCFG
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE
-#define SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE       0x00       // Access disabled
-// #define SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE    0xC5       // Access enabled if also enabled in FCFG
+//#define SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE       0x00       // Access disabled
+#define SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE    0xC5       // Access enabled if also enabled in FCFG
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_1_WUC_TAP_ENABLE
-#define SET_CCFG_CCFG_TAP_DAP_1_WUC_TAP_ENABLE          0x00       // Access disabled
-// #define SET_CCFG_CCFG_TAP_DAP_1_WUC_TAP_ENABLE       0xC5       // Access enabled if also enabled in FCFG
+// #define SET_CCFG_CCFG_TAP_DAP_1_WUC_TAP_ENABLE          0x00       // Access disabled
+#define SET_CCFG_CCFG_TAP_DAP_1_WUC_TAP_ENABLE       0xC5       // Access enabled if also enabled in FCFG
 #endif
 
 //#####################################
@@ -352,7 +352,7 @@
 #define DEFAULT_CCFG_EXT_LF_CLK          ( \
 	 ( ((uint32_t)( SET_CCFG_EXT_LF_CLK_DIO           << CCFG_EXT_LF_CLK_DIO_S           )) | ~CCFG_EXT_LF_CLK_DIO_M           ) & \
 	 ( ((uint32_t)( SET_CCFG_EXT_LF_CLK_RTC_INCREMENT << CCFG_EXT_LF_CLK_RTC_INCREMENT_S )) | ~CCFG_EXT_LF_CLK_RTC_INCREMENT_M ) )
-     
+
 #define DEFAULT_CCFG_MODE_CONF_1         ( \
 	 ( ((uint32_t)( SET_CCFG_MODE_CONF_1_ALT_DCDC_VMIN      << CCFG_MODE_CONF_1_ALT_DCDC_VMIN_S      )) | ~CCFG_MODE_CONF_1_ALT_DCDC_VMIN_M      ) & \
 	 ( ((uint32_t)( SET_CCFG_MODE_CONF_1_ALT_DCDC_DITHER_EN << CCFG_MODE_CONF_1_ALT_DCDC_DITHER_EN_S )) | ~CCFG_MODE_CONF_1_ALT_DCDC_DITHER_EN_M ) & \
@@ -437,9 +437,9 @@
 #define DEFAULT_CCFG_IMAGE_VALID_CONF    ( \
 	 ( ((uint32_t)( SET_CCFG_IMAGE_VALID_CONF_IMAGE_VALID << CCFG_IMAGE_VALID_CONF_IMAGE_VALID_S )) | ~CCFG_IMAGE_VALID_CONF_IMAGE_VALID_M ) )
 
-#define DEFAULT_CCFG_CCFG_PROT_31_0      SET_CCFG_CCFG_PROT_31_0  
-#define DEFAULT_CCFG_CCFG_PROT_63_32     SET_CCFG_CCFG_PROT_63_32 
-#define DEFAULT_CCFG_CCFG_PROT_95_64     SET_CCFG_CCFG_PROT_95_64 
+#define DEFAULT_CCFG_CCFG_PROT_31_0      SET_CCFG_CCFG_PROT_31_0
+#define DEFAULT_CCFG_CCFG_PROT_63_32     SET_CCFG_CCFG_PROT_63_32
+#define DEFAULT_CCFG_CCFG_PROT_95_64     SET_CCFG_CCFG_PROT_95_64
 #define DEFAULT_CCFG_CCFG_PROT_127_96    SET_CCFG_CCFG_PROT_127_96
 
 //*****************************************************************************
@@ -461,7 +461,7 @@ const ccfg_t __ccfg __attribute__((section(".ccfg"))) __attribute__((used)) =
     DEFAULT_CCFG_MODE_CONF_1        , // 0x50003FAC  sector in FLASH.
     DEFAULT_CCFG_SIZE_AND_DIS_FLAGS , // 0x50003FB0  Independent of FLASH size)
     DEFAULT_CCFG_MODE_CONF          , // 0x50003FB4
-    DEFAULT_CCFG_VOLT_LOAD_0        , // 0x50003FB8 
+    DEFAULT_CCFG_VOLT_LOAD_0        , // 0x50003FB8
     DEFAULT_CCFG_VOLT_LOAD_1        , // 0x50003FBC
     DEFAULT_CCFG_RTC_OFFSET         , // 0x50003FC0
     DEFAULT_CCFG_FREQ_OFFSET        , // 0x50003FC4
