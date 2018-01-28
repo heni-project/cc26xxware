@@ -177,22 +177,22 @@
 //#####################################
 
 #ifndef SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE
-// #define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE      0x00       // Disable ROM boot loader
-#define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE         0xC5       // Enable ROM boot loader
+#define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE            0x00       // Disable ROM boot loader
+// #define SET_CCFG_BL_CONFIG_BOOTLOADER_ENABLE         0xC5       // Enable ROM boot loader
 #endif
 
 #ifndef SET_CCFG_BL_CONFIG_BL_LEVEL
-#define SET_CCFG_BL_CONFIG_BL_LEVEL                  0x0        // Active low to open boot loader backdoor
-// #define SET_CCFG_BL_CONFIG_BL_LEVEL               0x1        // Active high to open boot loader backdoor
+// #define SET_CCFG_BL_CONFIG_BL_LEVEL                  0x0        // Active low to open boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_LEVEL                     0x1        // Active high to open boot loader backdoor
 #endif
 
 #ifndef SET_CCFG_BL_CONFIG_BL_PIN_NUMBER
-#define SET_CCFG_BL_CONFIG_BL_PIN_NUMBER             0x0B       // DIO number for boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_PIN_NUMBER                0xFF       // DIO number for boot loader backdoor
 #endif
 
 #ifndef SET_CCFG_BL_CONFIG_BL_ENABLE
-#define SET_CCFG_BL_CONFIG_BL_ENABLE                 0xC5       // Enabled boot loader backdoor
-// #define SET_CCFG_BL_CONFIG_BL_ENABLE                    0xFF       // Disabled boot loader backdoor
+// #define SET_CCFG_BL_CONFIG_BL_ENABLE                 0xC5       // Enabled boot loader backdoor
+#define SET_CCFG_BL_CONFIG_BL_ENABLE                    0xFF       // Disabled boot loader backdoor
 #endif
 
 //#####################################
@@ -205,8 +205,8 @@
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_0_CPU_DAP_ENABLE
-#define SET_CCFG_CCFG_TAP_DAP_0_CPU_DAP_ENABLE       0x00       // Access disabled
-// #define SET_CCFG_CCFG_TAP_DAP_0_CPU_DAP_ENABLE          0xC5       // Access enabled if also enabled in FCFG
+// #define SET_CCFG_CCFG_TAP_DAP_0_CPU_DAP_ENABLE       0x00       // Access disabled
+#define SET_CCFG_CCFG_TAP_DAP_0_CPU_DAP_ENABLE          0xC5       // Access enabled if also enabled in FCFG
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_0_PRCM_TAP_ENABLE
@@ -215,8 +215,8 @@
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_0_TEST_TAP_ENABLE
-#define SET_CCFG_CCFG_TAP_DAP_0_TEST_TAP_ENABLE      0x00       // Access disabled
-// #define SET_CCFG_CCFG_TAP_DAP_0_TEST_TAP_ENABLE         0xC5       // Access enabled if also enabled in FCFG
+// #define SET_CCFG_CCFG_TAP_DAP_0_TEST_TAP_ENABLE      0x00       // Access disabled
+#define SET_CCFG_CCFG_TAP_DAP_0_TEST_TAP_ENABLE         0xC5       // Acces/s enabled if also enabled in FCFG
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_1_PBIST2_TAP_ENABLE
@@ -225,7 +225,7 @@
 #endif
 
 #ifndef SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE
-//#define SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE       0x00       // Access disabled
+// #define SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE       0x00       // Access disabled
 #define SET_CCFG_CCFG_TAP_DAP_1_PBIST1_TAP_ENABLE    0xC5       // Access enabled if also enabled in FCFG
 #endif
 
